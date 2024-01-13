@@ -1,0 +1,364 @@
+$index-font: 'Work Sans';
+$primary-background: rgba(128, 0, 128, 1);
+$primary-button: rgba(255, 255, 255, 1);
+*{
+    box-shadow: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    padding: 0;
+    margin: 0;
+    .container{
+        padding: 10px 0;
+        background: rgba(245, 245, 220, 1);
+        .navbar{
+            display: grid;
+            grid-template-columns: 10% 60% 30%;
+            padding: 1rem;
+            box-shadow: 0px 0px 3px 3px $primary-background;
+            margin: 0 2rem;
+            .nav-logo{
+                img{
+                    width: 86px;
+                    height: 76px;
+                    top: 30px;
+                    left: 70px;                
+                }
+            }
+                .page-list{
+                    ul{
+                        list-style-type: none;
+                        text-align: center;
+                        display: flex;
+                        flex-flow: row wrap;
+                        font-family: $index-font;
+                        li{
+                            padding: 2rem 4rem;
+                            text-align: center;
+                            // min-width: 6rem;
+                            a{
+                                display: block;
+                                text-decoration: none;
+                                text-align: center;
+                            }
+                        }
+                    }
+                }
+
+            // }
+            .signing{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                padding: 2rem;
+                text-align: right;
+                ul{
+                    padding: 0 1rem;
+                    list-style-type: none;
+                    text-decoration: none;
+                    li{
+                        // padding: 1rem;
+
+                        a{
+
+                        }
+                    }
+                }
+            }
+        }
+        .digifile{
+            display: grid;
+            grid-template-columns: 55% 45%;
+            padding: 3rem;
+            .seamless-title{
+                h1{
+                    font-family: $index-font;
+                    font-size: 56px;
+                    font-weight: 700;
+                    line-height: 66px;
+                    letter-spacing: 0em;
+                    text-align: left;
+                }
+                p{
+                    font-family: $index-font;
+                    font-size: 24px;
+                    font-weight: 400;
+                    line-height: 2rem;
+                    letter-spacing: 0em;
+                    text-align: left;
+                    padding: 1rem 0 2rem 0;
+                }
+                a{
+                    text-decoration: none;
+                    cursor: pointer;
+                    font-family: $index-font;
+                    button{
+                        font-family: $index-font;
+                        background-color: $primary-background;
+                        font-size: 32px;
+                        font-weight: 700;
+                        letter-spacing: 0em;
+                        padding: 0.5rem;
+                        width: 45%;
+                        border: $primary-background;
+                        color: white;
+                        cursor: pointer;
+                        border-radius: 8px;
+                    }
+                }
+            }
+            .seamless-icon{
+                background: linear-gradient(180deg, #800080 0%, #FFA500 100%);
+                border-radius: 50%;
+                width: 467px;
+                height: 467px;
+                padding: 0 2rem;
+                .file-icon{
+                    padding: 1rem;
+                    .filecon{
+                        padding: 1rem;
+                        height: 134px;
+                        width: 134px;
+                        margin-top: 2rem;
+                    }
+                }
+            }
+        }
+        .management{
+            display: flex;
+            flex-direction: row wrap;
+            padding: 2rem;
+            margin: 1rem;
+            background: rgba(255, 255, 255, 1);
+            .manage-illustration{
+                padding: 0 1rem 0 0;
+                img{
+                    width: 626px;
+                    height: 418px;
+                    top: 94px;
+                    left: 77px;
+                    border-radius: 20px;
+                }
+            }
+            .management-documents{
+                padding: 0 0 0 1rem;
+                h1{
+                    font-family: $index-font;
+                    font-size: 56px;
+                    font-weight: 700;
+                    line-height: 66px;
+                    letter-spacing: 0em;
+                    text-align: left;
+                }
+                p{
+                    font-family: $index-font;
+                    font-size: 24px;
+                    font-weight: 400;
+                    line-height: 2rem;
+                    letter-spacing: 0em;
+                    text-align: left;
+                    padding: 1rem 0 2rem 0;
+                }
+                a{
+                    text-decoration: none;
+                    cursor: pointer;
+                    font-family: $index-font;
+                    button{
+                        font-family: $index-font;
+                        background-color: $primary-button;
+                        font-size: 32px;
+                        font-weight: 700;
+                        letter-spacing: 0em;
+                        padding: 0.5rem;
+                        width: 45%;
+                        border: $primary-background;
+                        color: rgba(51, 51, 51, 1);
+                        cursor: pointer;
+                        border-radius: 8px;
+                        border: 1px solid rgba(51, 51, 51, 1);
+                    }
+                }
+            }
+        }
+        .assignment-module{
+            display: flex;
+            flex-direction: row wrap;
+            padding: 2rem;
+            margin: 1rem;
+            background: rgba(255, 255, 255, 1);
+            .module-management{
+                h1{
+                    font-family: $index-font;
+                    font-size: 56px;
+                    font-weight: 700;
+                    line-height: 60px;
+                    letter-spacing: 0em;
+                    text-align: left;
+                }
+                p{
+                    font-family: $index-font;
+                    font-size: 24px;
+                    font-weight: 400;
+                    line-height: 2rem;
+                    letter-spacing: 0em;
+                    text-align: left;
+                    padding: 1rem 0 2rem 0;
+                }
+                a{
+                    text-decoration: none;
+                    cursor: pointer;
+                    font-family: $index-font;
+                    button{
+                        font-family: $index-font;
+                        background-color: $primary-button;
+                        font-size: 32px;
+                        font-weight: 700;
+                        letter-spacing: 0em;
+                        padding: 0.5rem;
+                        width: 45%;
+                        border: $primary-background;
+                        color: rgba(51, 51, 51, 1);
+                        cursor: pointer;
+                        border-radius: 8px;
+                        border: 1px solid rgba(51, 51, 51, 1);
+                    }
+                }
+            }
+            .module-illustration{
+                padding: 0 0 0 1rem;
+                img{
+                    width: 626px;
+                    height: 418px;
+                    top: 94px;
+                    left: 77px;
+                    border-radius: 20px;
+                }
+            }
+        }
+        .secure-data{
+            padding: 2rem;
+            margin: 1rem 1rem 0 1rem;
+            background: rgba(255, 255, 255, 1);
+            .data-handling{
+                display: grid;
+                justify-items: center;
+                text-align: center;
+                h1{
+                    font-family: $index-font;
+                    font-size: 56px;
+                    font-weight: 700;
+                    line-height: 66px;
+                    letter-spacing: 0em;
+                }
+                p{
+                    font-family: $index-font;
+                    font-size: 24px;
+                    font-weight: 400;
+                    line-height: 2rem;
+                    letter-spacing: 0em;
+                    text-align: center;
+                }
+                a{
+                    text-decoration: none;
+                    cursor: pointer;
+                    font-family: $index-font;
+                    button{
+                        font-family: $index-font;
+                        background-color: $primary-button;
+                        font-size: 22px;
+                        font-weight: 700;
+                        letter-spacing: 0em;
+                        padding: 0.5rem;
+                        margin: 1rem;
+                        width: 100%;
+                        border: $primary-background;
+                        color: rgba(51, 51, 51, 1);
+                        cursor: pointer;
+                        border-radius: 8px;
+                        border: 1px solid rgba(51, 51, 51, 1);
+                    }
+                }
+                img{
+                    text-align: center;
+                }
+            }
+        }
+        .dgfile{
+            border: 2px solid rgba(51, 51, 51, 0.5);
+            display: grid;
+            grid-template-columns: 1fr;
+            border-radius: 18px;
+                // text-align: center;
+            margin: 2rem 8rem;
+            padding: 1rem;
+            .what-digifile{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                border-bottom: 2px solid rgba(51, 51, 51, 0.5);
+                padding: 1rem;
+                margin: 0;
+                h1{
+                    justify-content: left;
+                    text-align: left;
+                }
+                svg{
+                    text-align: right;
+                    float: right;
+                    align-content: right;
+                }
+            }
+            p{
+                font-family: $index-font;
+                font-size: 24px;
+                font-weight: 400;
+                line-height: 2rem;
+                letter-spacing: 0em;
+                text-align: left;
+                padding: 1rem 0 0 0;
+                text-align: justified;
+            }
+        }
+        .frequent-questions{
+            .faq-title{
+                font-size: 56px;
+                font-weight: 700;
+                line-height: 66px;
+                letter-spacing: 0em;
+                text-align: center;
+                font-family: $index-font;
+            }
+            .faq{
+                border: 2px solid rgba(51, 51, 51, 0.5);
+                border-radius: 8px;
+                margin: 2rem 8rem;
+                padding: 0;
+                .faq-questions{
+                    display: grid;
+                    grid-template-columns: 70% 30%;
+                    padding: 1rem 2rem;
+                    margin: 0;
+                    h1{
+                        justify-content: left;
+                        text-align: left;
+                    }
+                    svg{
+                        text-align: right;
+                        float: right;
+                        align-content: right;
+                    }
+                }
+                .faq-answer{
+                    display: none;
+                }
+            }
+        }
+    }
+    footer{
+        background: rgba(19, 0, 19, 1);
+        color: rgba(255, 255, 255, 1);
+        .dg-footer{
+            display: grid;
+            grid-template-columns: 20% 80%;
+        }
+    }
+}
