@@ -8,7 +8,7 @@
 </head>
 <body>
 <div class="dashboard">
-    <section class="sidebar">
+    <section id="sidebar" class="sidebar">
         <div class="logo-name">
             <img src="img/Ellipse.png" alt="">
             <h1>Digifile</h1>
@@ -46,8 +46,13 @@
             </ul>
         </div>
     </section>
-    <section class="main-page">
+    <section id="main-page" class="main-page">
         <div class="header">
+            <div class="toggle-btn" onclick="toggleSidebar()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-menu-app" viewBox="0 0 16 16">
+                    <path d="M0 1.5A1.5 1.5 0 0 1 1.5 0h2A1.5 1.5 0 0 1 5 1.5v2A1.5 1.5 0 0 1 3.5 5h-2A1.5 1.5 0 0 1 0 3.5v-2zM1.5 1a.5.5 0 0 0-.5.5v2a.5.5 0 0 0 .5.5h2a.5.5 0 0 0 .5-.5v-2a.5.5 0 0 0-.5-.5h-2zM0 8a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V8zm1 3v2a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2H1zm14-1V8a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v2h14zM2 8.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0 4a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5z"/>
+                  </svg>
+            </div>
             <div class="search-input">
                 <input type="search" name="search" id="search">
             </div>
@@ -142,24 +147,12 @@
             <h2>Communication History</h2>
             <div class="communication-details">
                 <div class="user-profile">
-                    <img src="img/Ellipse 300.png" alt="">
-                </div>
-                <div class="username">
-                    <p>Ugochukwu Adibe</p>
-                </div>
-                <div class="message-date">
-                    <p>21-9-2023</p>
-                </div>
-                <div class="more-details">
-                    <a href="see-more.html">See more</a>
-                </div>
-            </div>
-            <div class="communication-details">
-                <div class="user-profile">
-                    <img src="img/Ellipse 301.png" alt="">
-                </div>
-                <div class="username">
-                    <p>Ugochukwu Adibe</p>
+                    <div class="user-dp">
+                        <img src="img/Ellipse 300.png" alt="">
+                    </div>
+                    <div class="username">
+                        <p>Ugochukwu Adibe</p>
+                    </div>
                 </div>
                 <div class="message-date">
                     <p>21-9-2023</p>
@@ -170,10 +163,28 @@
             </div>
             <div class="communication-details">
                 <div class="user-profile">
-                    <img src="img/Ellipse 302.png" alt="">
+                    <div class="user-dp">
+                        <img src="img/Ellipse 300.png" alt="">
+                    </div>
+                    <div class="username">
+                        <p>Ugochukwu Adibe</p>
+                    </div>
                 </div>
-                <div class="username">
-                    <p>Ugochukwu Adibe</p>
+                <div class="message-date">
+                    <p>21-9-2023</p>
+                </div>
+                <div class="more-details">
+                    <a href="see-more.html">See more</a>
+                </div>
+            </div>
+            <div class="communication-details">
+                <div class="user-profile">
+                    <div class="user-dp">
+                        <img src="img/Ellipse 300.png" alt="">
+                    </div>
+                    <div class="username">
+                        <p>Ugochukwu Adibe</p>
+                    </div>
                 </div>
                 <div class="message-date">
                     <p>21-9-2023</p>
@@ -193,5 +204,85 @@
         </footer>
     </section>
 </div>
+<!-- <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const sidebar = document.getElementById('sidebar');
+        sidebar.style.transform = 'translateX(0%)'; // Initially hide the sidebar
+    });
+
+    function toggleSidebar() {
+        const sidebar = document.getElementById('sidebar');
+        const isVisible = sidebar.style.transform === 'translateX(0%)';
+
+        if (isVisible) {
+            sidebar.style.transform = 'translateX(-100%)';
+        } else {
+            sidebar.style.transform = 'translateX(0%)';
+        }
+    }
+</script> -->
+<!-- <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const sidebar = document.querySelector('.sidebar');
+        const mainPage = document.querySelector('.main-page');
+        const toggleBtn = document.getElementById('toggle-btn');
+        
+        if (sidebar && mainPage && toggleBtn) {
+        sidebar.style.transform = 'translateX(-100%)';
+        mainPage.style.gridTemplateColumns = '20% 80%';
+        toggleBtn.addEventListener('click', toggleSidebar);
+    }
+    });
+
+    function toggleSidebar() {
+        const sidebar = document.querySelector('.sidebar');
+        const mainPage = document.querySelector('.main-page');
+        const dashboard = document.querySelector('.dashboard');
+        const isVisible = sidebar.style.transform === 'translateX(0%)';
+
+        if (isVisible) {
+            // sidebar.style.transform = 'translateX(-100%)';
+            dashboard.style.gridTemplateColumns = '20% 80%';
+        } else {
+            sidebar.style.transform = 'translateX(0%)';
+            dashboard.style.gridTemplateColumns = '0% 100%';
+        }
+    }
+</script> -->
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const sidebar = document.querySelector('.sidebar');
+        const mainPage = document.querySelector('.main-page');
+        const toggleBtn = document.getElementById('toggle-btn');
+
+        if (sidebar && mainPage && toggleBtn) {
+            sidebar.style.transform = 'translateX(0%)';
+            mainPage.style.gridTemplateColumns = '20% 80%';
+            toggleBtn.addEventListener('click', toggleSidebar);
+        }
+    });
+
+    function toggleSidebar() {
+        const sidebar = document.querySelector('.sidebar');
+        const mainPage = document.querySelector('.main-page');
+        const dashboard = document.querySelector('.dashboard');
+        const toggleBtn = document.getElementById('toggle-btn');
+        
+        const isVisible = sidebar.style.transform === 'translateX(0%)';
+
+        if (isVisible) {
+            sidebar.style.transform = 'translateX(0%)';
+            dashboard.style.gridTemplateColumns = '20% 80%';
+            // Remove the event listener only if it exists
+            if (toggleBtn) {
+                toggleBtn.removeEventListener('click', toggleSidebar);
+            }
+        } else {
+            sidebar.style.transform = 'translateX(0%)';
+            dashboard.style.gridTemplateColumns = '0% 100%';
+        }
+    }
+</script>
+
 </body>
 </html>
