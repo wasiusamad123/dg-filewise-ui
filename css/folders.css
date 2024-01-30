@@ -1,0 +1,243 @@
+* {
+  box-shadow: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Work Sans";
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+body .dashboard {
+  display: flex;
+  flex-direction: row wrap;
+}
+body .dashboard .sidebar {
+  background-color: rgb(19, 0, 19);
+  border-top-right-radius: 16px;
+  padding: 1rem;
+  display: block;
+  flex: 1;
+  position: relative;
+  height: 100vh;
+}
+body .dashboard .sidebar .logo-name {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  border-bottom: 1px solid rgb(255, 255, 255);
+  padding-bottom: 1rem;
+}
+body .dashboard .sidebar .logo-name h1 {
+  color: rgb(255, 255, 255);
+  font-family: "Work Sans";
+  margin-top: 2rem;
+}
+body .dashboard .sidebar .logo-name img {
+  height: 80px;
+  width: 80px;
+}
+body .dashboard .sidebar .sidebar-content ul {
+  padding-top: 1rem;
+}
+body .dashboard .sidebar .sidebar-content ul li {
+  margin-top: 2rem;
+  display: flex;
+}
+body .dashboard .sidebar .sidebar-content ul li svg {
+  padding: 0 0.5rem;
+}
+body .dashboard .sidebar .sidebar-content ul li a {
+  text-decoration: none;
+  font-family: "Work Sans";
+  font-size: 24px;
+  font-weight: 400;
+  color: rgb(255, 255, 255);
+  padding: 0 0.5rem;
+  margin-top: 0.25rem;
+}
+body .dashboard .sidebar .sidebar-content ul li .dash-link {
+  color: rgb(255, 165, 0);
+}
+body .dashboard .sidebar .sidebar-content ul li:hover {
+  border-left: 2px solid rgb(255, 255, 255);
+}
+body .dashboard .sidebar .sidebar-content ul li:active {
+  color: yellow;
+}
+body .dashboard .main {
+  background-color: rgb(245, 245, 220);
+  padding: 1rem 1rem 0 1rem;
+  flex: 4;
+  transition: 0.5s ease-in;
+}
+body .dashboard .main .header {
+  display: grid;
+  grid-template-columns: 3% 32% 35% 30%;
+}
+body .dashboard .main .header .toggle-btn {
+  cursor: pointer;
+}
+body .dashboard .main .header .search-input input {
+  width: 330px;
+  height: 40px;
+  border-radius: 8px;
+  padding: 0px, 0px, 0px, 15px;
+  gap: 20px;
+  font-family: "Work Sans";
+  font-size: 18px;
+}
+body .dashboard .main .header .user-name {
+  font-family: "Work Sans";
+  color: rgb(128, 0, 128);
+  justify-content: right;
+  float: right;
+  text-align: right;
+  font-size: 20px;
+  padding-top: 0.5rem;
+  font-weight: 600;
+}
+body .dashboard .main .header .alert-icon ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: right;
+}
+body .dashboard .main .header .alert-icon ul li {
+  padding: 10px 30px;
+}
+body .dashboard .main .login-name p {
+  font-family: Work Sans;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+body .dashboard .main .file-folder {
+  display: flex;
+  flex-direction: row wrap;
+}
+body .dashboard .main .file-folder .add-folder {
+  padding: 0.5rem 1rem 0 0;
+}
+body .dashboard .main .file-folder .add-folder button {
+  display: flex;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 6px;
+  font-weight: 600;
+  padding: 0.5rem;
+  margin: 0;
+}
+body .dashboard .main .file-folder .add-folder button p {
+  padding: 0.35rem;
+}
+body .dashboard .main .file-folder .add-folder button svg {
+  line-height: 1rem;
+  padding: 0.3rem 0 0 0;
+}
+body .dashboard .main .file-folder .add-file {
+  padding: 0.5rem 0 0 0;
+}
+body .dashboard .main .file-folder .add-file button {
+  display: flex;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 6px;
+  font-weight: 600;
+  padding: 0.5rem;
+  margin: 0;
+}
+body .dashboard .main .file-folder .add-file button p {
+  padding: 0.35rem;
+}
+body .dashboard .main .file-folder .add-file button svg {
+  line-height: 1rem;
+  padding: 0.25rem 0 0 0;
+}
+body .dashboard .main .add-announcement {
+  padding: 0.5rem 0 0 0;
+}
+body .dashboard .main .add-announcement button {
+  display: flex;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 6px;
+  font-weight: 600;
+  padding: 0.5rem;
+  margin: 0;
+}
+body .dashboard .main .add-announcement button p {
+  padding: 0.35rem;
+}
+body .dashboard .main .add-announcement button svg {
+  line-height: 1rem;
+}
+body .dashboard .main .folder-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+body .dashboard .main .folder-list .folder-one {
+  text-align: center;
+  padding: 1rem 0.5rem;
+}
+body .dashboard .main .folder-list .folder-one .folder-svg {
+  background-color: rgb(255, 255, 255);
+  border-radius: 18px;
+}
+body .dashboard .main .folder-list .folder-one .folder-svg svg {
+  height: 7rem;
+  width: 7rem;
+  color: black;
+  padding: 1rem 0;
+}
+body .dashboard .main .folder-list .folder-one .folder-svg p {
+  background-color: rgb(19, 0, 19);
+  color: rgb(255, 255, 255);
+  padding: 0;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: "Work Sans";
+  line-height: 3rem;
+  border-bottom-left-radius: 18px;
+  border-bottom-right-radius: 18px;
+}
+body .dashboard .main .folder-list .file-one {
+  text-align: center;
+  padding: 1rem 0.5rem;
+}
+body .dashboard .main .folder-list .file-one .pdf-svg {
+  background-color: rgb(255, 255, 255);
+  border-radius: 18px;
+}
+body .dashboard .main .folder-list .file-one .pdf-svg svg {
+  height: 7rem;
+  width: 7rem;
+  color: black;
+  padding: 1rem 0;
+}
+body .dashboard .main .folder-list .file-one .pdf-svg p {
+  background-color: rgb(19, 0, 19);
+  color: rgb(255, 255, 255);
+  padding: 0;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: "Work Sans";
+  line-height: 3rem;
+  border-bottom-left-radius: 18px;
+  border-bottom-right-radius: 18px;
+}
+body .dashboard .main .folder-list .file-one .pdf-svg p svg {
+  width: 24px;
+  height: 24px;
+  padding: 1rem;
+}
+body .dashboard .main footer {
+  display: grid;
+  padding-top: 1.5rem;
+  grid-template-columns: 1fr 1fr;
+  font-size: 18px;
+}
+body .dashboard .main footer .site-version {
+  justify-self: right;
+}/*# sourceMappingURL=folders.css.map */

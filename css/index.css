@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Work+Sans&display=swap");
 * {
   box-shadow: border-box;
   padding: 0;
@@ -8,7 +7,6 @@
 body {
   padding: 0;
   margin: 0;
-  font-family: "Work Sans";
 }
 body .container {
   padding: 10px 0;
@@ -35,10 +33,9 @@ body .container .navbar .page-list ul {
   flex-flow: row wrap;
   font-family: "Work Sans";
   color: black;
-  font-size: 18px;
 }
 body .container .navbar .page-list ul li {
-  padding: 2rem 3rem;
+  padding: 2rem 4rem;
   text-align: center;
 }
 body .container .navbar .page-list ul li a {
@@ -846,4 +843,4 @@ body footer .dg-footer .dgsocial-media .copyright {
 body footer .dg-footer .dgsocial-media .copyright p {
   padding: 0;
   font-size: 20px;
-}/*# sourceMappingURL=index.css.map */
+}

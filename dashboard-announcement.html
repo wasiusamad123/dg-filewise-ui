@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/folders.css">
     <title>DO's Dashboard</title>
 </head>
 <body>
@@ -46,9 +46,9 @@
             </ul>
         </div>
     </section>
-    <section id="main-page" class="main-page">
+    <section id="main" class="main">
         <div class="header">
-            <div class="toggle-btn" onclick="toggleSidebar()">
+            <div class="toggle-btn" onclick="openNav()">
                 <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-menu-app" viewBox="0 0 16 16">
                     <path d="M0 1.5A1.5 1.5 0 0 1 1.5 0h2A1.5 1.5 0 0 1 5 1.5v2A1.5 1.5 0 0 1 3.5 5h-2A1.5 1.5 0 0 1 0 3.5v-2zM1.5 1a.5.5 0 0 0-.5.5v2a.5.5 0 0 0 .5.5h2a.5.5 0 0 0 .5-.5v-2a.5.5 0 0 0-.5-.5h-2zM0 8a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V8zm1 3v2a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2H1zm14-1V8a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v2h14zM2 8.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0 4a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5z"/>
                   </svg>
@@ -79,119 +79,22 @@
         <div class="login-name">
             <P>Hello Departmental Officer (DO). Welcome to your desk.</P>
         </div>
-        <div class="students-statistics">
-            <div class="total-students">
-                <h2>TOTAL NUMBER OF STUDENTS</h2>
-                <div class="students-img">
-                    <img src="img/Ellipse 300.png" alt="">
-                    <img class="ellipse-two" src="img/Ellipse 301.png" alt="">
-                    <img src="img/Ellipse 302.png" alt="">
-                    <img src="img/Ellipse 303.png" alt="">
-                    <img src="img/Frame 37.png" alt="">
-                </div>
-                <h2 class="total-number">250</h2>
-            </div>
-            <div class="statistics">
-                <h2>STATISTICS</h2>
-            <div class="level-chart">
-                <div class="level-statistics">
-                    <div><div class="final-level"></div><p>500 Level</p></div>
-                    <div><div class="fourth-level"></div><p>400 Level</p></div>
-                    <div><div class="third-level"></div><p>300 Level</p></div>
-                    <div><div class="second-level"></div><p>200 Level</p></div>
-                    <div><div class="first-level"></div><p>100 Level</p></div>
-                </div>
-                <div class="pie-chart">
-                    <img src="img/Group 1.png" alt="">
-                </div>
-            </div>
-            </div>
+        <div class="add-announcement">
+            <button><p>Make Announcements</p> <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3.99276 16.4937C2.94446 14.7266 2.57734 12.6375 2.96033 10.6187C3.34332 8.60004 4.45008 6.79057 6.07279 5.53013C7.69549 4.26969 9.72252 3.64498 11.7732 3.77331C13.8239 3.90164 15.7573 4.77418 17.2102 6.22708C18.6631 7.67999 19.5356 9.61331 19.664 11.664C19.7923 13.7147 19.1676 15.7418 17.9072 17.3645C16.6467 18.9872 14.8373 20.094 12.8186 20.477C10.7999 20.86 8.71077 20.4928 6.94358 19.4445L6.9436 19.4445L4.02945 20.2771C3.90888 20.3115 3.78129 20.3131 3.65991 20.2816C3.53853 20.2502 3.42777 20.1869 3.3391 20.0982C3.25043 20.0095 3.18709 19.8988 3.15564 19.7774C3.12419 19.656 3.12576 19.5284 3.16021 19.4078L3.99283 16.4937L3.99276 16.4937Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M10.7882 20.6122C11.203 21.7897 11.8737 22.8606 12.7522 23.7477C13.6306 24.6347 14.6948 25.316 15.8682 25.7423C17.0416 26.1686 18.2949 26.3294 19.5379 26.2131C20.7809 26.0967 21.9826 25.7062 23.0565 25.0696L23.0565 25.0695L25.9706 25.9021C26.0912 25.9366 26.2188 25.9381 26.3401 25.9067C26.4615 25.8752 26.5723 25.8119 26.661 25.7232C26.7496 25.6346 26.813 25.5238 26.8444 25.4024C26.8759 25.281 26.8743 25.1534 26.8398 25.0329L26.0072 22.1187L26.0073 22.1188C26.7471 20.8711 27.1528 19.4539 27.1854 18.0038C27.218 16.5537 26.8763 15.1196 26.1933 13.84C25.5102 12.5604 24.509 11.4784 23.286 10.6985C22.0631 9.91853 20.6598 9.46691 19.2115 9.38721" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg></button>
         </div>
-        <div class="announcement-history">
-            <h2>Announcement History</h2>
-            <div class="announcement">
-                <div class="message-title">
-                    <p>Resumption Memo: This is a kind reminder that a</p>
-                </div>
-                <div class="date">
-                    19-10-2023
-                </div>
-                <div class="see-more">
-                    <a href="see-more.html">See more</a>
-                </div>
+        <h2>Announcements History</h2>
+        <div class="announcement">
+            <div class="announcement-title">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
             </div>
-            <div class="announcement">
-                <div class="message-title">
-                    <p>Course Registration Memo: Dear students be inform that</p>
-                </div>
-                <div class="date">
-                    25-10-2023
-                </div>
-                <div class="see-more">
-                    <a href="see-more.html">See more</a>
-                </div>
+            <div class="date">
+                <p>12-1-2024</p>
             </div>
-            <div class="announcement">
-                <div class="message-title">
-                    <p>Exam Condition Memo: This is a kind reminder that a</p>
-                </div>
-                <div class="date">
-                    19-01-2024
-                </div>
-                <div class="see-more">
-                    <a href="see-more.html">See more</a>
-                </div>
-            </div>
-        </div>
-        <div class="communication-history">
-            <h2>Communication History</h2>
-            <div class="communication-details">
-                <div class="user-profile">
-                    <div class="user-dp">
-                        <img src="img/Ellipse 300.png" alt="">
-                    </div>
-                    <div class="username">
-                        <p>Ugochukwu Adibe</p>
-                    </div>
-                </div>
-                <div class="message-date">
-                    <p>21-9-2023</p>
-                </div>
-                <div class="more-details">
-                    <a href="see-more.html">See more</a>
-                </div>
-            </div>
-            <div class="communication-details">
-                <div class="user-profile">
-                    <div class="user-dp">
-                        <img src="img/Ellipse 300.png" alt="">
-                    </div>
-                    <div class="username">
-                        <p>Ugochukwu Adibe</p>
-                    </div>
-                </div>
-                <div class="message-date">
-                    <p>21-9-2023</p>
-                </div>
-                <div class="more-details">
-                    <a href="see-more.html">See more</a>
-                </div>
-            </div>
-            <div class="communication-details">
-                <div class="user-profile">
-                    <div class="user-dp">
-                        <img src="img/Ellipse 300.png" alt="">
-                    </div>
-                    <div class="username">
-                        <p>Ugochukwu Adibe</p>
-                    </div>
-                </div>
-                <div class="message-date">
-                    <p>21-9-2023</p>
-                </div>
-                <div class="more-details">
-                    <a href="see-more.html">See more</a>
-                </div>
+            <div class="see-more">
+                <a href="see-more.html">See More-</a>
             </div>
         </div>
         <footer>
@@ -204,5 +107,15 @@
         </footer>
     </section>
 </div>
+<script>
+    function openNav(){
+        const sidebar = document.getElementById('sidebar');
+        if(sidebar.style.display === 'none'){
+            sidebar.style.display = "block";
+        }else{
+            sidebar.style.display = "none";
+        }
+    }
+</script>
 </body>
 </html>
