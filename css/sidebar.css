@@ -12,17 +12,18 @@ body {
 }
 body .dashboard {
   background-color: rgb(245, 245, 220);
-  display: grid;
-  grid-template-columns: 20% 80%;
+  display: flex;
+  flex-direction: row wrap;
 }
 body .dashboard .sidebar {
+  display: block;
   background-color: rgb(19, 0, 19);
   border-top-right-radius: 16px;
   padding: 1rem;
   transition: transform 0.5s ease;
   position: relative;
-  height: 100%;
-  display: block;
+  flex: 1;
+  height: 100vh;
 }
 body .dashboard .sidebar .logo-name {
   display: grid;
@@ -67,20 +68,21 @@ body .dashboard .sidebar .sidebar-content ul li:hover {
 body .dashboard .sidebar .sidebar-content ul li:active {
   color: yellow;
 }
-body .dashboard .main-page {
+body .dashboard .main {
   background-color: rgb(245, 245, 220);
-  padding: 1rem 1rem 0rem 1rem;
-  z-index: 1;
-  transition: margin-left 0.5s ease;
+  transition: transform 0.1s ease;
+  width: 100%;
+  flex: 4;
 }
-body .dashboard .main-page .header {
+body .dashboard .main .header {
   display: grid;
-  grid-template-columns: 3% 32% 35% 30%;
+  grid-template-columns: 3% 30% 37% 30%;
+  padding: 1rem;
 }
-body .dashboard .main-page .header .toggle-btn {
+body .dashboard .main .header .toggle-btn {
   padding: 10px 0;
 }
-body .dashboard .main-page .header .search-input input {
+body .dashboard .main .header .search-input input {
   width: 330px;
   height: 40px;
   border-radius: 8px;
@@ -89,7 +91,7 @@ body .dashboard .main-page .header .search-input input {
   font-family: "Work Sans";
   font-size: 18px;
 }
-body .dashboard .main-page .header .user-name {
+body .dashboard .main .header .user-name {
   font-family: "Work Sans";
   color: rgb(128, 0, 128);
   justify-content: right;
@@ -99,15 +101,18 @@ body .dashboard .main-page .header .user-name {
   padding-top: 0.5rem;
   font-weight: 600;
 }
-body .dashboard .main-page .header .alert-icon ul {
+body .dashboard .main .header .alert-icon ul {
   list-style-type: none;
   display: flex;
   justify-content: right;
 }
-body .dashboard .main-page .header .alert-icon ul li {
+body .dashboard .main .header .alert-icon ul li {
   padding: 10px 30px;
 }
-body .dashboard .main-page .login-name p {
+body .dashboard .main .login-name {
+  padding: 0 1rem;
+}
+body .dashboard .main .login-name p {
   font-family: Work Sans;
   font-size: 24px;
   font-weight: 400;
@@ -115,33 +120,68 @@ body .dashboard .main-page .login-name p {
   letter-spacing: 0em;
   text-align: left;
 }
-body .dashboard .main-page .students-statistics {
+body .dashboard .main h2 {
+  font-size: 24px;
+  font-family: "Work Sans";
+  padding: 0.5rem 1rem;
+}
+body .dashboard .main .all-students {
+  padding: 0 1rem;
+  background-color: rgb(255, 255, 255);
+  border-radius: 20px;
+  margin: 1rem;
+}
+body .dashboard .main .all-students .student-data {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 0.5rem;
+  font-size: 18px;
+}
+body .dashboard .main .all-students .student-data .username {
+  display: flex;
+}
+body .dashboard .main .all-students .student-data .username .dp img {
+  height: 45px;
+  width: 45px;
+}
+body .dashboard .main .all-students .student-data .username .name {
   padding: 1rem 0;
 }
-body .dashboard .main-page .students-statistics .total-students {
+body .dashboard .main .all-students .student-data .reg-no {
+  justify-self: center;
+  padding: 1rem 0;
+}
+body .dashboard .main .all-students .student-data .level {
+  justify-self: right;
+  padding: 1rem 0;
+}
+body .dashboard .main .students-statistics {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 1rem;
+}
+body .dashboard .main .students-statistics .total-students {
   background: rgb(255, 255, 255);
   width: 80%;
   border-radius: 30px;
   padding: 2rem;
 }
-body .dashboard .main-page .students-statistics .total-students .students-img {
+body .dashboard .main .students-statistics .total-students .students-img {
   display: flex;
   padding: 2rem 0;
 }
-body .dashboard .main-page .students-statistics .total-students .students-img img {
+body .dashboard .main .students-statistics .total-students .students-img img {
   width: 85.46px;
   height: 83px;
   top: 302px;
   z-index: 1;
 }
-body .dashboard .main-page .students-statistics .total-students .students-img .ellipse-two {
+body .dashboard .main .students-statistics .total-students .students-img .ellipse-two {
   width: 85.46px;
   height: 83px;
   top: 302px;
 }
-body .dashboard .main-page .students-statistics .total-students .total-number {
+body .dashboard .main .students-statistics .total-students .total-number {
   font-family: "Work Sans";
   font-size: 64px;
   font-weight: 700;
@@ -150,55 +190,55 @@ body .dashboard .main-page .students-statistics .total-students .total-number {
   text-align: left;
   padding-top: 2rem;
 }
-body .dashboard .main-page .students-statistics .statistics {
+body .dashboard .main .students-statistics .statistics {
   background: rgb(255, 255, 255);
   border-radius: 30px;
   padding: 2rem;
 }
-body .dashboard .main-page .students-statistics .statistics .level-chart {
+body .dashboard .main .students-statistics .statistics .level-chart {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
-body .dashboard .main-page .students-statistics .statistics .level-chart .level-statistics div {
+body .dashboard .main .students-statistics .statistics .level-chart .level-statistics div {
   display: flex;
   margin: 0.25rem 0;
 }
-body .dashboard .main-page .students-statistics .statistics .level-chart .level-statistics div .final-level {
+body .dashboard .main .students-statistics .statistics .level-chart .level-statistics div .final-level {
   background: rgb(5, 191, 224);
   width: 24px;
   height: 24px;
   border-radius: 50%;
   margin: 0.6rem 0;
 }
-body .dashboard .main-page .students-statistics .statistics .level-chart .level-statistics div .fourth-level {
+body .dashboard .main .students-statistics .statistics .level-chart .level-statistics div .fourth-level {
   background: rgb(255, 102, 54);
   width: 24px;
   height: 24px;
   border-radius: 50%;
   margin: 0.6rem 0;
 }
-body .dashboard .main-page .students-statistics .statistics .level-chart .level-statistics div .third-level {
+body .dashboard .main .students-statistics .statistics .level-chart .level-statistics div .third-level {
   background: rgb(5, 156, 75);
   width: 24px;
   height: 24px;
   border-radius: 50%;
   margin: 0.6rem 0;
 }
-body .dashboard .main-page .students-statistics .statistics .level-chart .level-statistics div .second-level {
+body .dashboard .main .students-statistics .statistics .level-chart .level-statistics div .second-level {
   background: rgb(255, 165, 0);
   width: 24px;
   height: 24px;
   border-radius: 50%;
   margin: 0.6rem 0;
 }
-body .dashboard .main-page .students-statistics .statistics .level-chart .level-statistics div .first-level {
+body .dashboard .main .students-statistics .statistics .level-chart .level-statistics div .first-level {
   background: rgb(128, 0, 128);
   width: 24px;
   height: 24px;
   border-radius: 50%;
   margin: 0.6rem 0;
 }
-body .dashboard .main-page .students-statistics .statistics .level-chart .level-statistics div p {
+body .dashboard .main .students-statistics .statistics .level-chart .level-statistics div p {
   margin: 0.45rem;
   font-family: "Work Sans";
   font-size: 24px;
@@ -207,11 +247,12 @@ body .dashboard .main-page .students-statistics .statistics .level-chart .level-
   letter-spacing: 0em;
   text-align: left;
 }
-body .dashboard .main-page .announcement-history {
+body .dashboard .main .announcement-history {
   background: rgb(255, 255, 255);
   padding: 2rem;
+  margin: 1rem;
 }
-body .dashboard .main-page .announcement-history h2 {
+body .dashboard .main .announcement-history h2 {
   font-family: "Work Sans";
   font-size: 24px;
   font-weight: 600;
@@ -219,11 +260,11 @@ body .dashboard .main-page .announcement-history h2 {
   letter-spacing: 0em;
   text-align: left;
 }
-body .dashboard .main-page .announcement-history .announcement {
+body .dashboard .main .announcement-history .announcement {
   display: grid;
   grid-template-columns: 40% 35% 25%;
 }
-body .dashboard .main-page .announcement-history .announcement .message-title {
+body .dashboard .main .announcement-history .announcement .message-title {
   font-family: "Work Sans";
   font-size: 16px;
   font-weight: 400;
@@ -232,7 +273,7 @@ body .dashboard .main-page .announcement-history .announcement .message-title {
   text-align: left;
   padding: 1rem 0;
 }
-body .dashboard .main-page .announcement-history .announcement .date {
+body .dashboard .main .announcement-history .announcement .date {
   padding: 1rem 0;
   font-family: "Work Sans";
   font-size: 16px;
@@ -241,11 +282,11 @@ body .dashboard .main-page .announcement-history .announcement .date {
   letter-spacing: 0em;
   text-align: center;
 }
-body .dashboard .main-page .announcement-history .announcement .see-more {
+body .dashboard .main .announcement-history .announcement .see-more {
   text-align: right;
   padding: 1rem 0;
 }
-body .dashboard .main-page .announcement-history .announcement .see-more a {
+body .dashboard .main .announcement-history .announcement .see-more a {
   text-decoration: none;
   font-family: "Work Sans";
   font-size: 16px;
@@ -261,12 +302,12 @@ body .dashboard .main-page .announcement-history .announcement .see-more a {
   gap: 8px;
   padding: 0.25rem 2rem;
 }
-body .dashboard .main-page .communication-history {
+body .dashboard .main .communication-history {
   background-color: rgb(255, 255, 255);
-  margin: 1rem 0;
+  margin: 1rem;
   padding: 2rem;
 }
-body .dashboard .main-page .communication-history h2 {
+body .dashboard .main .communication-history h2 {
   font-family: "Work Sans";
   font-size: 24px;
   font-weight: 600;
@@ -275,19 +316,19 @@ body .dashboard .main-page .communication-history h2 {
   text-align: left;
   padding: 0 0 1rem 0;
 }
-body .dashboard .main-page .communication-history .communication-details {
+body .dashboard .main .communication-history .communication-details {
   display: grid;
   grid-template-columns: 40% 35% 25%;
   padding: 1rem 0;
 }
-body .dashboard .main-page .communication-history .communication-details .user-profile {
+body .dashboard .main .communication-history .communication-details .user-profile {
   display: flex;
 }
-body .dashboard .main-page .communication-history .communication-details .user-profile .user-dp img {
+body .dashboard .main .communication-history .communication-details .user-profile .user-dp img {
   width: 24.46px;
   height: 24px;
 }
-body .dashboard .main-page .communication-history .communication-details .user-profile .username p {
+body .dashboard .main .communication-history .communication-details .user-profile .username p {
   padding: 0 10px;
   font-family: "Work Sans";
   font-size: 16px;
@@ -296,13 +337,13 @@ body .dashboard .main-page .communication-history .communication-details .user-p
   letter-spacing: 0em;
   text-align: left;
 }
-body .dashboard .main-page .communication-history .communication-details .message-date {
+body .dashboard .main .communication-history .communication-details .message-date {
   text-align: center;
 }
-body .dashboard .main-page .communication-history .communication-details .more-details {
+body .dashboard .main .communication-history .communication-details .more-details {
   text-align: right;
 }
-body .dashboard .main-page .communication-history .communication-details .more-details a {
+body .dashboard .main .communication-history .communication-details .more-details a {
   text-decoration: none;
   font-family: "Work Sans";
   font-size: 16px;
@@ -318,17 +359,18 @@ body .dashboard .main-page .communication-history .communication-details .more-d
   gap: 8px;
   padding: 0.25rem 2rem;
 }
-body .dashboard .main-page footer {
+body .dashboard .main footer {
   display: grid;
   grid-template-columns: 1fr 1fr;
   background-color: rgb(19, 0, 19);
   color: rgb(255, 255, 255);
   border-radius: 16px;
+  margin: 1rem;
 }
-body .dashboard .main-page footer .copyright {
+body .dashboard .main footer .copyright {
   padding: 2rem;
 }
-body .dashboard .main-page footer .site-version {
+body .dashboard .main footer .site-version {
   text-align: right;
   padding: 2rem;
 }
@@ -339,14 +381,20 @@ body .dashboard .main-page footer .site-version {
     margin: 0;
   }
   body .dashboard {
-    display: grid;
-    grid-template-columns: 0% 100%;
-    padding: 0;
+    background-color: rgb(245, 245, 220);
+    display: flex;
+    flex-direction: row wrap;
+    overflow: auto;
   }
   body .dashboard .sidebar {
+    display: none;
     background-color: rgb(19, 0, 19);
     border-top-right-radius: 16px;
     padding: 1rem;
+    transition: transform 0.5s ease;
+    position: relative;
+    flex: 1;
+    z-index: 1;
   }
   body .dashboard .sidebar .logo-name {
     display: grid;
@@ -391,26 +439,28 @@ body .dashboard .main-page footer .site-version {
   body .dashboard .sidebar .sidebar-content ul li:active {
     color: yellow;
   }
-  body .dashboard .main-page {
+  body .dashboard .main {
     background-color: rgb(245, 245, 220);
-    padding: 1rem;
+    transition: transform 0.1s ease;
+    width: 100%;
+    flex: 4;
   }
-  body .dashboard .main-page .header {
+  body .dashboard .main .header {
     display: flex;
     padding: 1rem 0;
   }
-  body .dashboard .main-page .header .toggle-btn {
+  body .dashboard .main .header .toggle-btn {
     flex: 0.3;
     padding: 0;
     cursor: pointer;
   }
-  body .dashboard .main-page .header .toggle-btn svg {
+  body .dashboard .main .header .toggle-btn svg {
     cursor: pointer;
   }
-  body .dashboard .main-page .header .search-input {
+  body .dashboard .main .header .search-input {
     flex: 1;
   }
-  body .dashboard .main-page .header .search-input input {
+  body .dashboard .main .header .search-input input {
     width: 100%;
     height: 30px;
     border-radius: 8px;
@@ -419,7 +469,7 @@ body .dashboard .main-page footer .site-version {
     font-family: "Work Sans";
     font-size: 18px;
   }
-  body .dashboard .main-page .header .user-name {
+  body .dashboard .main .header .user-name {
     font-family: "Work Sans";
     color: rgb(128, 0, 128);
     justify-content: center;
@@ -431,57 +481,56 @@ body .dashboard .main-page footer .site-version {
     float: center;
     flex: 2;
   }
-  body .dashboard .main-page .header .alert-icon {
+  body .dashboard .main .header .alert-icon {
     justify-self: center;
   }
-  body .dashboard .main-page .header .alert-icon ul {
+  body .dashboard .main .header .alert-icon ul {
     list-style-type: none;
     display: flex;
     justify-content: right;
     text-align: right;
   }
-  body .dashboard .main-page .header .alert-icon ul li {
+  body .dashboard .main .header .alert-icon ul li {
     padding: 5px 10px;
   }
-  body .dashboard .main-page .login-name {
-    padding: 0;
+  body .dashboard .main .login-name {
+    padding: 0 1rem;
   }
-  body .dashboard .main-page .login-name p {
+  body .dashboard .main .login-name p {
     font-family: Work Sans;
-    font-size: 20px;
+    font-size: 24px;
     font-weight: 400;
     line-height: 28px;
     letter-spacing: 0em;
     text-align: left;
   }
-  body .dashboard .main-page .students-statistics {
-    display: flex;
-    flex-direction: column;
-    padding: 0;
+  body .dashboard .main .students-statistics {
+    display: grid;
+    grid-template-columns: 100%;
   }
-  body .dashboard .main-page .students-statistics .total-students {
+  body .dashboard .main .students-statistics .total-students {
     background: rgb(255, 255, 255);
     border-radius: 30px;
     padding: 3rem;
     margin: 1rem 0;
   }
-  body .dashboard .main-page .students-statistics .total-students .students-img {
+  body .dashboard .main .students-statistics .total-students .students-img {
     display: flex;
     flex-direction: row wrap;
   }
-  body .dashboard .main-page .students-statistics .total-students .students-img img {
+  body .dashboard .main .students-statistics .total-students .students-img img {
     width: 73px;
     height: 73px;
     top: 302px;
     z-index: 1;
     padding: 0;
   }
-  body .dashboard .main-page .students-statistics .total-students .students-img .ellipse-two {
+  body .dashboard .main .students-statistics .total-students .students-img .ellipse-two {
     width: 85.46px;
     height: 83px;
     top: 302px;
   }
-  body .dashboard .main-page .students-statistics .total-students .total-number {
+  body .dashboard .main .students-statistics .total-students .total-number {
     font-family: "Work Sans";
     font-size: 64px;
     font-weight: 700;
@@ -490,54 +539,55 @@ body .dashboard .main-page footer .site-version {
     text-align: left;
     padding-top: 2rem;
   }
-  body .dashboard .main-page .students-statistics .statistics {
+  body .dashboard .main .students-statistics .statistics {
     background: rgb(255, 255, 255);
     border-radius: 30px;
+    padding: 2rem;
   }
-  body .dashboard .main-page .students-statistics .statistics .level-chart {
+  body .dashboard .main .students-statistics .statistics .level-chart {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
-  body .dashboard .main-page .students-statistics .statistics .level-chart .level-statistics div {
+  body .dashboard .main .students-statistics .statistics .level-chart .level-statistics div {
     display: flex;
     margin: 0.25rem 0;
   }
-  body .dashboard .main-page .students-statistics .statistics .level-chart .level-statistics div .final-level {
+  body .dashboard .main .students-statistics .statistics .level-chart .level-statistics div .final-level {
     background: rgb(5, 191, 224);
     width: 24px;
     height: 24px;
     border-radius: 50%;
     margin: 0.6rem 0;
   }
-  body .dashboard .main-page .students-statistics .statistics .level-chart .level-statistics div .fourth-level {
+  body .dashboard .main .students-statistics .statistics .level-chart .level-statistics div .fourth-level {
     background: rgb(255, 102, 54);
     width: 24px;
     height: 24px;
     border-radius: 50%;
     margin: 0.6rem 0;
   }
-  body .dashboard .main-page .students-statistics .statistics .level-chart .level-statistics div .third-level {
+  body .dashboard .main .students-statistics .statistics .level-chart .level-statistics div .third-level {
     background: rgb(5, 156, 75);
     width: 24px;
     height: 24px;
     border-radius: 50%;
     margin: 0.6rem 0;
   }
-  body .dashboard .main-page .students-statistics .statistics .level-chart .level-statistics div .second-level {
+  body .dashboard .main .students-statistics .statistics .level-chart .level-statistics div .second-level {
     background: rgb(255, 165, 0);
     width: 24px;
     height: 24px;
     border-radius: 50%;
     margin: 0.6rem 0;
   }
-  body .dashboard .main-page .students-statistics .statistics .level-chart .level-statistics div .first-level {
+  body .dashboard .main .students-statistics .statistics .level-chart .level-statistics div .first-level {
     background: rgb(128, 0, 128);
     width: 24px;
     height: 24px;
     border-radius: 50%;
     margin: 0.6rem 0;
   }
-  body .dashboard .main-page .students-statistics .statistics .level-chart .level-statistics div p {
+  body .dashboard .main .students-statistics .statistics .level-chart .level-statistics div p {
     margin: 0.45rem;
     font-family: "Work Sans";
     font-size: 24px;
@@ -546,12 +596,12 @@ body .dashboard .main-page footer .site-version {
     letter-spacing: 0em;
     text-align: left;
   }
-  body .dashboard .main-page .announcement-history {
+  body .dashboard .main .announcement-history {
     background: rgb(255, 255, 255);
     padding: 2rem;
     margin: 1rem 0;
   }
-  body .dashboard .main-page .announcement-history h2 {
+  body .dashboard .main .announcement-history h2 {
     font-family: "Work Sans";
     font-size: 24px;
     font-weight: 600;
@@ -559,11 +609,11 @@ body .dashboard .main-page footer .site-version {
     letter-spacing: 0em;
     text-align: left;
   }
-  body .dashboard .main-page .announcement-history .announcement {
+  body .dashboard .main .announcement-history .announcement {
     display: grid;
     grid-template-columns: 40% 30% 30%;
   }
-  body .dashboard .main-page .announcement-history .announcement .message-title {
+  body .dashboard .main .announcement-history .announcement .message-title {
     font-family: "Work Sans";
     font-size: 16px;
     font-weight: 400;
@@ -572,7 +622,7 @@ body .dashboard .main-page footer .site-version {
     text-align: left;
     padding: 1rem 0;
   }
-  body .dashboard .main-page .announcement-history .announcement .date {
+  body .dashboard .main .announcement-history .announcement .date {
     padding: 1rem 0;
     font-family: "Work Sans";
     font-size: 16px;
@@ -581,11 +631,11 @@ body .dashboard .main-page footer .site-version {
     letter-spacing: 0em;
     text-align: center;
   }
-  body .dashboard .main-page .announcement-history .announcement .see-more {
+  body .dashboard .main .announcement-history .announcement .see-more {
     text-align: right;
     padding: 1rem 0;
   }
-  body .dashboard .main-page .announcement-history .announcement .see-more a {
+  body .dashboard .main .announcement-history .announcement .see-more a {
     text-decoration: none;
     font-family: "Work Sans";
     font-size: 16px;
@@ -599,12 +649,12 @@ body .dashboard .main-page footer .site-version {
     gap: 8px;
     padding: 0.25rem 1.2rem;
   }
-  body .dashboard .main-page .communication-history {
+  body .dashboard .main .communication-history {
     background-color: rgb(255, 255, 255);
     margin: 1rem 0;
     padding: 2rem;
   }
-  body .dashboard .main-page .communication-history h2 {
+  body .dashboard .main .communication-history h2 {
     font-family: "Work Sans";
     font-size: 24px;
     font-weight: 600;
@@ -613,19 +663,19 @@ body .dashboard .main-page footer .site-version {
     text-align: left;
     padding: 0 0 1rem 0;
   }
-  body .dashboard .main-page .communication-history .communication-details {
+  body .dashboard .main .communication-history .communication-details {
     display: grid;
     grid-template-columns: 40% 35% 25%;
     padding: 1rem 0;
   }
-  body .dashboard .main-page .communication-history .communication-details .user-profile {
+  body .dashboard .main .communication-history .communication-details .user-profile {
     display: flex;
   }
-  body .dashboard .main-page .communication-history .communication-details .user-profile .user-dp img {
+  body .dashboard .main .communication-history .communication-details .user-profile .user-dp img {
     width: 24.46px;
     height: 24px;
   }
-  body .dashboard .main-page .communication-history .communication-details .user-profile .username p {
+  body .dashboard .main .communication-history .communication-details .user-profile .username p {
     padding: 0 10px;
     font-family: "Work Sans";
     font-size: 16px;
@@ -634,13 +684,13 @@ body .dashboard .main-page footer .site-version {
     letter-spacing: 0em;
     text-align: left;
   }
-  body .dashboard .main-page .communication-history .communication-details .message-date {
+  body .dashboard .main .communication-history .communication-details .message-date {
     text-align: center;
   }
-  body .dashboard .main-page .communication-history .communication-details .more-details {
+  body .dashboard .main .communication-history .communication-details .more-details {
     text-align: right;
   }
-  body .dashboard .main-page .communication-history .communication-details .more-details a {
+  body .dashboard .main .communication-history .communication-details .more-details a {
     text-decoration: none;
     font-family: "Work Sans";
     font-size: 16px;
@@ -654,21 +704,19 @@ body .dashboard .main-page footer .site-version {
     gap: 8px;
     padding: 0.25rem 0.6rem;
   }
-  body .dashboard .main-page footer {
+  body .dashboard .main footer {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     background-color: rgb(19, 0, 19);
     color: rgb(255, 255, 255);
     border-radius: 16px;
-    font-size: 16px;
-    padding: 1rem;
+    margin: 1rem;
   }
-  body .dashboard .main-page footer .copyright {
-    text-align: center;
-    padding: 0;
+  body .dashboard .main footer .copyright {
+    padding: 2rem;
   }
-  body .dashboard .main-page footer .site-version {
-    text-align: center;
-    padding: 0;
+  body .dashboard .main footer .site-version {
+    text-align: right;
+    padding: 2rem;
   }
-}/*# sourceMappingURL=dashboard.css.map */
+}/*# sourceMappingURL=sidebar.css.map */

@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
 $index-font: 'Work Sans';
 $primary-background: rgba(128, 0, 128, 1);
 $primary-button: rgba(255, 255, 255, 1);
@@ -9,6 +10,7 @@ $primary-button: rgba(255, 255, 255, 1);
 body{
     padding: 0;
     margin: 0;
+    font-family: $index-font;
     .container{
         padding: 10px 0;
         background: rgba(245, 245, 220, 1);
@@ -35,8 +37,9 @@ body{
                         flex-flow: row wrap;
                         font-family: $index-font;
                         color: black;
+                        font-size: 18px;
                         li{
-                            padding: 2rem 4rem;
+                            padding: 2rem 3rem;
                             text-align: center;
                             // min-width: 6rem;
                             a{
